@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="Logo pt2.png" type="image/png" sizes="16x16">
+    <title>Menu de Pagina Unificada</title>
+    <link rel="stylesheet" href="style1.css">
+    <link rel="stylesheet" href="style11.css">
+    <link rel="stylesheet" href="style2.css">
+    <link rel="stylesheet" href="style3.css">
+    <link rel="stylesheet" href="style4.css">
+</head>
+<body>
+    <!-- Menú de navegación -->
+    <nav>
+        <ul>
+            <li><a href="#seccion1">Pagina 66 y 104</a></li>
+            <li><a href="#seccion2">Pagina 72</a></li>
+            <li><a href="#seccion3">Pagina 222</a></li>
+            <li><a href="#seccion4">Pagina 255</a></li>
+        </ul>
+    </nav>
+
+    <section id="seccion1">
+        <header id="titulo1" class="fcolor-d5">
+            <h1>Ediciones Fares</h1>
+            <h2>Esta es la pagina 66 y 104 de Ediciones Fares</h2> 
+        </header>    
+        <nav class="fcolor-l4">
+            <ul>
+                <li><a href="#">Principal</a></li>
+                <li><a href="#">Libros</a></li>
+                <li class="f-desplegable">
+                    <a href="#" class="btndesplegable">Inventarios</a>
+                    <div class="cont-desplegable">
+                        <a href="index.php">Crear producto</a>
+                        <a href="#">Consultar producto</a>
+                    </div>
+                </li>
+                <li><a href="#">Contacto</a></li>
+            </ul>
+        </nav>
+        <section class="fcolor-l1 seccion-form">
+            <div class="s-encabezado">
+                <h2>Inventario</h2>
+            </div>
+            <form class="fcolor-l5" action="guardar.html" method="post" enctype="multipart/form-data" autocomplete="off">
+                <div id="codnom">
+                    <label class="codnom1">Codigo: <input type="text" class="campof" name="codigo" id="codigo" pattern="[0-9]{3,}" placeholder="Ingresar solo numeros" size="12" autofocus required> </label>
+                    <label class="codnom1">Producto: <input type="text" class="campof" name="nproducto" id="nproducto" pattern="^[a-zA-Z\s]+{3,100}" placeholder="Ingresar solo letras" size="50" autofocus required> </label>
+                </div>
+                <div id="cospor">
+                    <label class="codnom1">Costo: <input type="text" class="campof" name="costop" id="costop" pattern="[0-9]+([,\.][0-9]+)?"> </label>
+                    <label class="codnom1">Porcentaje de venta: <input type="text" class="campof" name="porcentajev" id="porcentajev" maxlength="3" size="4"> </label>
+                </div>
+                <div id="prefecha">
+                    <label class="codnom1">Precio de venta: <input type="text" class="campof" name="pventa" id="pventa" readonly> </label>
+                    <label class="codnom1">Fecha: <input type="date" class="campof" name="fecha_creacion" id="fecha_creacion"> </label>
+                </div>
+                <div id="csimagen">
+                    <img src="" width="200px" alt="Imagen del producto...">
+                </div>
+                <div id="botonimg">
+                    <input type="file" class="campof" name="simagen" id="simagen">
+                </div>
+                <input type="submit" value="Guardar">
+            </form>
+        </section>
+        <footer class="fcolor-d5">
+            <p>Derechos Reservados a mi Nathan &copy; 2004-2023 </p>
+        </footer>
+    </section>
+    <section id="seccion2">
+        <div class="container">
+            <header>
+                <h1>Ediciones Fares</h1>
+                <h2>Esta es la pagina 72 es un formulario para recibir equipo de computo en el Taller</h2>
+            </header>
+            <nav>
+                <a href="index.html">Principal</a>
+                <a href="nosotros.html">Nosotros</a>
+                <div>
+                    <button type="button">Libros</button>
+                    <ul>
+                        <li><a href="#">Educación Básica</a></li>
+                        <li><a href="#">I Bachillerato técnico profesional en informática</a></li>
+                        <li><a href="#">II Bachillerato técnico profesional en informática</a></li>
+                        <li><a href="#">III Bachillerato técnico profesional en informática</a></li>
+                        <li><a href="#">I Bachillerato en ciencias y humanidades</a></li>
+                        <li><a href="#">II Bachillerato en ciencias y humanidades</a></li>
+                        <li><a href="btp-informatica.html">Todo BTP informática</a></li>
+                    </ul>
+                </div>
+                <a href="alumn.html">Estudiantes</a>
+                <a href="contacto.html">Contacto</a>
+            </nav>
+            <section>
+                <h2>Contáctenos</h2>
+                <form action="prueba.php" method="post">
+                    <p>
+                        <label for="nombre">Nombres</label>
+                        <input id="nombre" name="nombre" type="text" required>
+                    </p>
+                    <p>
+                        <label for="apellido">Apellidos</label>
+                        <input id="apellido" name="apellido" type="text" required>
+                    </p>
+                    <p>
+                        <label for="email">Email</label>
+                        <input id="email" name="email" type="email" required>
+                    </p>
+                    <div>
+                        <p>
+                            <input id="hombre" type="radio" name="genero" value="hombre" checked>
+                            <label for="hombre">Hombre</label>
+                        </p>
+                        <p>
+                            <input id="mujer" type="radio" name="genero" value="mujer">
+                            <label for="mujer">Mujer</label>
+                        </p>
+                    </div>
+                    <div>
+                        <h3>Libros de mi interés</h3>
+                        <p>
+                            <input id="edbas" name="edbas" type="checkbox" value="Educación Básica" checked>
+                            <label for="edbas">Educación Básica</label>
+                        </p>
+                        <p>
+                            <input id="i_btp" name="i_btp" type="checkbox" value="I BTP en informática">
+                            <label for="i_btp">I BTP en informática</label>
+                        </p>
+                        <p>
+                            <input id="ii_btp" name="ii_btp" type="checkbox" value="II BTP en informática">
+                            <label for="ii_btp">II BTP en informática</label>
+                        </p>
+                        <p>
+                            <input id="iii_btp" name="iii_btp" type="checkbox" value="III BTP en informática">
+                            <label for="iii_btp">III BTP en informática</label>
+                        </p>
+                    </div>
+                    <button type="submit" name="enviar">Enviar datos</button>
+                </form>
+            </section>
+        </div>
+    </section>
+    <section id="seccion3">
+        <main class="container">
+            <div class="header">
+                <div class="left-header">
+                    <h3>Sistema de Facturacion</h3>
+                    <h3>Esta es la pagina de la 222 Sistema de Facturacion</h3>
+                </div>
+                <div class="right-header">
+                    <h3>Factura No 1.</h3>
+                    <h3 id="numfactura">0000</h3>
+                </div>
+            </div>
+            <form class="form-container" action="guardarfactura.php" method="post">
+                <input type="hidden" id="numfacturar" name="numfacturar">
+                <div class="table-container">
+                    <table class="tabla">
+                        <tr class="ajaxTitle">
+                            <th>Id-Producto</th>
+                            <th>Cantidad</th>
+                            <th>Descripcion</th>
+                            <th>Precio</th>
+                            <th>Total</th>
+                        </tr>
+                    </table>
+                </div>
+                <br>
+                <div class="totals">
+                    <div>
+                        <button id="btnNueva" class="btn-teal" type="button">Nueva Factura</button>
+                        <input id="guarfact" name="guarfact" class="btn-teal" type="submit" value="Guardar Factura">
+                    </div>
+                    <div class="totals-right">
+                        <div>
+                            <label for="sutotalfact">Subtotal:</label>
+                            <input type="text" id="sutotalfact" name="sutotalfact" class="input-field">
+                        </div>
+                        <div>
+                            <label for="impuestofact">IVA:</label>
+                            <input type="text" id="impuestofact" name="impuestofact" class="input-field">
+                        </div>
+                        <div>
+                            <label for="todpagarfact">Total a pagar:</label>
+                            <input type="text" id="todpagarfact" name="todpagarfact" class="input-field">
+                        </div>
+                    </div>
+                </div>
+                <div class="product-client">
+                    <div id="datosproducto" class="product">
+                        <fieldset>
+                            <legend>Seleccionar Producto</legend>
+                            <div>
+                                <label for="">Codigo</label>
+                                <input type="text" id="codpro" class="input-field">
+                            </div>
+                            <div>
+                                <label for="">Cantidad</label>
+                                <input type="text" id="cantpro" class="input-field">
+                            </div>
+                            <div>
+                                <label for="">Descripcion:</label>
+                                <input type="text" id="despro" class="input-field">
+                            </div>
+                            <div>
+                                <label for="">Precio</label>
+                                <input type="text" id="prepro" class="input-field">
+                            </div>
+                            <div>
+                                <label for="">Total</label>
+                                <input type="text" id="toppro" class="input-field">
+                            </div>
+                        </fieldset>
+                        <div>
+                            <button id="btn2" class="btn-blue" type="button">Agregar producto</button>
+                        </div>
+                    </div>
+                    <div id="Datoscliente" class="client">
+                        <fieldset>
+                            <legend>Seleccionar Cliente</legend>
+                            <div>
+                                <label for="">Codigo:</label>
+                                <input type="text" id="cod_cliente" name="cod_cliente" class="input-field">
+                            </div>
+                            <div>
+                                <label for="">Nombre del cliente:</label>
+                                <input type="text" id="nomcliente" class="input-field">
+                            </div>
+                        </fieldset>
+                    </div>
+                </div>
+            </form>
+        </main>
+    </section>
+    <section id="seccion4">
+        <div class="container">
+            <header>
+                <h1>Celulares gama alta</h1>
+                <h2>Esta es la pagina 255 la galeria de imagenes, la hice enfocada en Celulares</h2>
+            </header>
+    
+            <nav class="navbar">
+                <ul>
+                    <li><a href="#">Principal</a></li>
+                    <li><a href="#">Celulares</a></li>
+                    <li><a href="#">Inventario</a></li>
+                    <li><a href="#">Contacto</a></li>
+                </ul>
+            </nav>
+    
+            <section class="gallery-header">
+                <h2>Galería de Celulares</h2>
+            </section>
+    
+            <div class="gallery">
+                <div class="celular">
+                    <img src="OnePlus12.jpg" alt="OnePlus12" class="celular-img">
+                </div>
+                <div class="celular">
+                    <img src="RedMagic9.jpg" alt="RedMagic9" class="celular-img">
+                </div>
+                <div class="celular">
+                    <img src="SamsungS24.jpg" alt="SamsungS24" class="celular-img">
+                </div>
+                <div class="celular">
+                    <img src="Xiaomi14.jpg" alt="Xiaomi14" class="celular-img">
+                </div>
+            </div>
+    
+            <div id="overlay" class="overlay">
+                <img id="overlayImg" src="" alt="Zoomed Image">
+            </div>
+        </div>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
